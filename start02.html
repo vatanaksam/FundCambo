@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FundCambo</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            width: 100%;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+    .main-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      z-index: 10;
+      padding: 1em 0;
+      box-sizing: border-box;
+    }
+
+    .top-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1em;
+    }
+
+    .top-nav ul {
+      list-style: none;
+      display: flex;
+      gap: 5em;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+
+    .top-nav a {
+      text-decoration: none;
+      color: #333;
+      padding: 0.5em 1em;
+    }
+
+    .top-nav .logo {
+      font-weight: bold;
+      color: #088F8F;
+      text-decoration: none;
+    }
+
+    .top-nav .button {
+      background-color: #088F8F;
+      color: white;
+      border-radius: 5px;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      padding-top: 150px;
+      padding-bottom: 50px;
+    }
+
+    button[type="submit"] {
+      background-color: #088F8F; 
+      border: none; /* Remove border if any */
+    }
+
+
+
+
+  </style>
+</head>
+
+<header class="main-header">
+    <nav class="top-nav">
+        <ul>
+            <li class="nav-item"><a href="how-it-works.html">How it works</a></li>
+            <li class="nav-item charities"><a href="charity.html">Charities</a></li>
+            <li class="nav-item logo-item"><a href="index.html" class="logo">Fund<span>Cambo</span></a></li>
+            <li class="nav-item"><a href="sign-in.html">Sign in</a></li>
+            <li class="nav-item"><a href="start.html" class="button">Start a FundCambo</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Left Section -->
+        <div class="w-2/6 flex flex-col justify-center text-white" style="background-color: #088F8F;">
+            <h1 class="text-3xl font-bold text-center mb-4">Fill in your fundraising details</h1>
+            <p class="text-sm font-normal text-center">
+                Provide your fundraising goal, campaign reason, and your starting goal.
+            </p>
+        </div>
+
+         <!-- Right Section -->
+        <div class="w-4/6 flex flex-col">
+            <!-- Sign In Link -->
+            <div class="text-right p-8 pt-12 pr-12"> <!-- Adjusted padding for 'Sign in' -->
+                <a href="sign-in.html" class="text-blue-500 hover:text-blue-600">Sign in</a>
+            </div>
+            <!-- Form Container -->
+            <div class="flex-grow flex justify-center items-center">
+                <div class="bg-white p-8 rounded-lg shadow-md w-2/3">
+                    <h2 class="text-2xl font-bold mb-6">Your fundrasing details</h2>
+                    <form class="space-y-4">
+                        <div class="flex gap-4">
+                            <input type="text" placeholder="First Name" class="w-1/2 px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:border-blue-500" />
+                            <input type="text" placeholder="Last Name" class="w-1/2 px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:border-blue-500" />
+                        </div>
+                        <input type="email" placeholder="Starting Goal ($)" class="w-full px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:border-blue-500" />
+                        <input type="email" placeholder="Fundraising Goal" class="w-full px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:border-blue-500" />
+                         <div class="mb-4">
+                            <textarea placeholder="Reason" class="w-full h-32 px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:border-blue-500" rows="4"></textarea>
+                        </div>
+ <!-- Action Buttons -->
+                        <div class="flex justify-between items-center mt-4">
+                            <!-- Go Back Arrow -->
+                            <a href="start.html" class="flex items-center text-blue-500 hover:text-blue-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                                </svg>
+                                Go back
+                            </a>
+
+                           <!-- Continue Button -->
+<div class="flex justify-end">
+    <button id="continueButton" type="button" class="px-6 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none" >
+        Submit
+    </button>
+</div>   
+
+
+      <!-- JavaScript for changing label color on selection -->
+<script>
+    document.getElementById('continueButton').addEventListener('click', function() {
+        window.location.href = 'start03.html';
+    });
+</script>
+</body>
+
+</html>

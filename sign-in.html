@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact-Us</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style>
+    body {
+        background-image: url('sign-bg.png'); /* Sets the background image for the entire page */
+        background-size: cover; /* Ensures the image covers the entire page */
+        background-position: center; /* Centers the background image */
+        background-attachment: fixed; /* Makes the background image fixed during scroll */
+    }
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: transparent;
+        z-index: 10;
+    }
+    .top-nav .button {
+        background-color: #088F8F; /* Button background color */
+        color: white;
+        padding: 0.5rem 1rem; /* Padding to increase the button size */
+        border-radius: 5px; /* Rounded corners */
+        text-decoration: none; /* Remove underline from links */
+        transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    }
+    .top-nav .button:hover {
+        background-color: #066868; /* Darker shade for hover effect */
+    }
+    header .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header h1, header nav ul li a {
+        color: #ffffff;
+        margin-right: 20px;
+        padding: 0.5rem 1rem;
+    }
+    .header-text {
+        color: #ffffff;
+    }
+    .card {
+        background-color: rgba(70, 78, 81, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+        border-radius: 10px;
+        overflow: hidden;
+        transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+    .card h2, .card p, .card a {
+        color: #ffffff;
+    }
+    .about-us h2, .about-us p {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+    .container, .contact-details {
+        position: relative;
+        z-index: 2;
+    }
+    .contact-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+    }
+    .text-section {
+        flex-basis: 75%;
+        padding: 2rem;
+        z-index: 2;
+    }
+    .form-section {
+        flex-basis: 30%;
+        padding: 2rem;
+        margin-right: 2rem;
+        background-color: rgba(70, 78, 81, 0.9);
+        border-radius: 0.5rem;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .form-section h2 {
+        color: #ffffff;
+        margin-bottom: 1rem;
+    }
+    .forgot-password {
+        color: #007bff; /* Blue color */
+        text-decoration: underline; /* Underline style */
+        cursor: pointer; /* Changes the cursor to a pointer on hover */
+        display: block; /* Makes the link take up the full width */
+        margin-top: 0rem; /* Adds space above the link */
+        text-align: left; /* Aligns the text to the right */
+    }
+		.sign-up {
+        color: #007bff; /* Blue color */
+        text-decoration: underline; /* Underline style */
+        cursor: pointer; /* Changes the cursor to a pointer on hover */
+        display: block; /* Makes the link take up the full width */
+        margin-top: 0.5rem; /* Adds space above the link */
+        text-align: right; /* Aligns the text to the right */
+    }
+.link-blue {
+    color: #007bff; /* Blue color */
+    text-decoration: underline; /* Underline style */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+}
+.text-shadow {
+        text-shadow: 2px 2px 4px rgba(0,0,0,1.5); /* Adds a dark shadow for better readability */
+    }
+
+</style>
+</head>
+<body>
+<header>
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="index.html"> <!-- Make the logo clickable, navigating to "homepage.html" -->
+            <img src="logo.png" alt="NutriNest Logo" class="h-20 mr-7">
+        </a>
+        <nav class="flex-1 top-nav">
+            <ul class="flex justify-end space-x-4">
+                <li><a href="how-it-works.html" class="hover:text-gray-300">How it works</a></li>
+                <li><a href="charity.html" class="hover:text-gray-300">Charities</a></li>
+                <li><a href="sign-in.html" class="hover:text-gray-300">Sign In</a></li>
+                <!-- Start a FundCambo Button -->
+                <li><a href="start.html" class="button">Start a FundCambo</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<section class="text-gray-900 bg-cover bg-fixed min-h-screen flex items-center justify-center" style="background-image: url('contact.webp');">
+     <!-- Text column -->
+            <div class="w-full lg:w-3/5 px-4 mb- lg:mb-0">
+        <h1 class="text-6xl font-bold mb-4 text-white text-shadow">Together for Cambodia</h1>
+        <p class="mb-16 text-2xl text-white text-shadow">Your donation is crucial in contributing to the development of Cambodia.</p>
+    </div>
+
+
+<div class="form-section">
+    <h2 class="text-2xl font-bold text-white">Your account details</h2>
+    <form id="contactForm" class="space-y-4">
+    <div>
+      <input type="email" id="email" name="email" required
+             class="w-full p-2 border border-gray-300 rounded" placeholder="Email address*">
+    </div>
+    <div>
+      <input type="password" id="password" name="password" required
+             class="w-full p-2 border border-gray-300 rounded" placeholder="Password">
+    </div>
+    <!-- Flex container for links -->
+    <div class="flex justify-between">
+      <a href="#" class="link-blue">Forget password?</a>
+      <a href="#" class="link-blue">Sign Up</a>
+    </div>
+       <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700">
+      Sign In
+    </button>
+  </form>
+</div>
+</section>
+
+<script src="script.js"></script>
+
+    </body>
+</html>

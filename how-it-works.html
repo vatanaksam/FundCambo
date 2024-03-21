@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FundCambo</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            width: 100%;
+            padding-top: 10px;
+            background-image: url('how.webp');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            z-index: 10;
+            padding: 1em 0;
+            box-sizing: border-box;
+        }
+
+        .top-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 1em;
+        }
+
+        .top-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 5em;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .top-nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 0.5em 1em;
+        }
+
+        .top-nav .logo {
+            font-weight: bold;
+            color: #088F8F;
+            text-decoration: none;
+        }
+
+        .top-nav .button {
+            background-color: #088F8F;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 150px;
+            padding-bottom: 50px;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-top: 50px;
+            margin-bottom: 20px;
+			color: white;
+			text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .subheading {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+			color: white;
+			text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .video-container {
+            background-color: #e6e6e6;
+            position: relative;
+            padding-top: 30%;
+            width: 60%;
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+
+.video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('path_to_video_thumbnail.jpg');
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .play-button {
+            width: 100px;
+            height: 100px;
+            background: url('path_to_play_icon.png') no-repeat center;
+            background-size: contain;
+        }
+
+        .info-section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .info-block {
+            text-align: center;
+            flex-basis: calc(33.333% - 20px);
+            margin: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 8px;
+            color: black;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            font-size: 1.7rem;
+        }
+
+        .info-block ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-block li {
+            margin-bottom: 5px;
+            font-size: 1.125rem;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .info-block {
+                flex-basis: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="top-nav">
+            <ul>
+                <li class="nav-item"><a href="how-it-works.html">How it works</a></li>
+                <li class="nav-item charities"><a href="charity.html">Charities</a></li>
+                <li class="nav-item logo-item"><a href="index.html" class="logo">Fund<span>Cambo</span></a></li>
+                <li class="nav-item"><a href="sign-in.html">Sign in</a></li>
+                <li class="nav-item"><a href="start.html" class="button">Start a FundCambo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="heading">How FundCambo Works</div>
+        <div class="subheading">FundCambo is the best place to fundraise, whether you are an individual, group, or organisation.</div>
+         <div class="video-container">
+        <video controls>
+            <source src="path_to_your_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+<div class="info-section"> <!-- This wraps the info-blocks -->
+  <div class="info-block">
+    <!-- Content -->
+<h3 style="color: #0000FF">Start your fundraiser</h3>
+  <ol> <!-- Changed to ordered list for steps -->
+    <li>
+      <strong style="color: #0000FF">Set your fundraiser goal:</strong> Decide on the amount you need to raise. Consider the costs your project entails and set a realistic target that would cover all your needs.
+    </li>
+    <li>
+      <strong style="color: #0000FF">Tell your story:</strong> Explain why you're raising funds. Be transparent and heartfelt; your story is the soul of your campaign and can inspire others to contribute.
+    </li>
+    <li>
+      <strong style="color: #0000FF">Add a picture or video:</strong> Visuals can greatly enhance your message. Include high-quality images or a short video to make a strong, personal connection with potential donors.
+    </li>
+    <li>
+      <strong style="color: #0000FF">Watch a video tutorial:</strong> If you're new to fundraising, consider watching our tutorial videos. They can guide you through the process and offer valuable tips.
+    </li>
+  </ol>
+
+  </div>
+  <div class="info-block">
+    <!-- Content -->
+<h3 style="color: #0000FF">Share with friends</h3>
+  <ol> <!-- Changed to ordered list for steps -->
+    <li>
+      <strong style="color: #0000FF">Send emails:</strong> Craft a personalized email message and send it to your contacts. A direct appeal can often lead to early donations to get your campaign going.
+    </li>
+    <li>
+      <strong style="color: #0000FF">Send text messages:</strong> A quick text can be an effective nudge. Reach out to close friends and family members who might prefer this more direct form of communication.
+    </li>
+    <li>
+      <strong style="color: #0000FF">Share on social media:</strong> Leverage the power of social networks. Post your fundraiser link on your social media accounts to reach a wider audience quickly.
+    </li>
+    <li>
+      <strong style="color: #0000FF">Watch a video tutorial:</strong> For strategies on sharing your fundraiser and spreading the word effectively, watch our series of sharing tutorials.
+    </li>
+  </ol>
+
+  </div>
+  <div class="info-block">
+    <!-- Content -->
+<h3 style="color: #0000FF">Manage donations</h3>
+  <ol> <!-- Changed to ordered list for steps -->
+    <li>
+      <strong style="color: #0000FF">Accept donations:</strong> Monitor your fundraising page regularly. Make sure donations are being processed correctly and update your total as needed.
+    </li>
+    <li>
+      <strong style="color: #0000FF">Thank donors:</strong> Show appreciation to your supporters. Personal thank-you messages can go a long way in building a supportive community.
+    </li>
+    <li>
+      <strong style="color: #0000FF">Withdraw funds:</strong> Follow the steps to safely withdraw the funds you have raised. Ensure you understand the procedures and timelines for transferring funds to your account.
+    </li>
+  </ol>
+
+  </div>
+</div>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FundCambo</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+       body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            width: 100%;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+    .main-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      z-index: 10;
+      padding: 1em 0;
+      box-sizing: border-box;
+    }
+.custom-continue-btn:hover {
+            background-color: #2980b9; /* Hex code for hover state */
+        }
+
+    .top-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1em;
+    }
+
+    .top-nav ul {
+      list-style: none;
+      display: flex;
+      gap: 5em;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+
+    .top-nav a {
+      text-decoration: none;
+      color: #333;
+      padding: 0.5em 1em;
+    }
+
+    .top-nav .logo {
+      font-weight: bold;
+      color: #088F8F;
+      text-decoration: none;
+    }
+
+    .top-nav .button {
+      background-color: #088F8F;
+      color: white;
+      border-radius: 5px;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      padding-top: 150px;
+      padding-bottom: 50px;
+    }
+.choice-container {
+  /* Style for the container */
+}
+
+.choice-box:hover {
+  background-color: #f3f4f6; /* Slightly lighter grey for hover effect */
+  border-color: #d1d5db; /* Lighten border on hover */
+}
+.choice-box {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+    button[type="submit"] {
+      background-color: #088F8F; 
+      border: none; /* Remove border if any */
+    }
+
+
+.choice-box.selected {
+  background-color: #dff8eb; /* Light green background for selected state */
+  border-color: #34d399; /* Tailwind's green-400 for the border */
+}
+
+.choice-icon {
+  /* Styles for the icon container */
+  margin-bottom: 10px;
+ flex-shrink: 0; 
+}
+
+.choice-content {
+  /* Styles for the content container */
+ padding-right: 1rem;
+}
+
+.choice-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #111827; /* Tailwind's black */
+  margin-bottom: 5px;
+}
+
+.choice-description {
+  font-size: 16px;
+  color: #6b7280; /* Tailwind's gray-500 */
+}
+
+  </style>
+</head>
+
+<header class="main-header">
+    <nav class="top-nav">
+        <ul>
+            <li class="nav-item"><a href="how-it-works.html">How it works</a></li>
+            <li class="nav-item charities"><a href="charity.html">Charities</a></li>
+            <li class="nav-item logo-item"><a href="index.html" class="logo">Fund<span>Cambo</span></a></li>
+            <li class="nav-item"><a href="sign-in.html">Sign in</a></li>
+            <li class="nav-item"><a href="start.html" class="button">Start a FundCambo</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<body class="bg-gray-100">
+
+    <div class="flex h-screen">
+        <!-- Left Section -->
+        <div class="w-2/6 bg-green-500 p-6 flex flex-col justify-center text-white"  style="background-color: #088F8F;">
+            <h1 class="text-3xl font-bold text-center mb-4">Tell us who you’re raising funds for.</h1>
+            <p class="text-sm font-normal text-center">
+                This information helps us get to know you and your fundraising needs.
+            </p>
+        </div>
+
+        <!-- Right Section -->
+        <div class="w-3/4 bg-white shadow-lg rounded-lg mx-auto mt-26 p-60 flex flex-col items-center justify-start relative">
+            <!-- "Sign in" positioned absolutely at the top right of the right section -->
+            <div class="absolute top-12 right-20 pt-4 pr-6">
+                <a href="sign-in.html" class="text-green-500 hover:text-green-600">Sign in</a>
+            </div>
+
+            <!-- Form and choice boxes centered in the section -->
+            <form class="w-full mt-12">
+                <!-- Choice boxes with grid, gap, and horizontal margins -->
+                <div class="grid grid-cols-1 gap-6 mb-6 w-full">
+                    <!-- Choice box for "Yourself" -->
+                    <label class="choice-box cursor-pointer flex flex-row items-center justify-between p-4 border border-gray-300 rounded-lg w-full">
+                        <div class="choice-content">
+                            <h3 class="choice-title font-bold text-lg">Yourself</h3>
+                            <p class="choice-description text-gray-500">Funds are delivered to your bank account for your own use</p>
+                        </div>
+                        <img src="yourself.png" alt="Yourself" class="choice-icon h-12 w-12 object-cover"> <!-- Replace with your image path -->
+                        <input type="radio" class="hidden" name="fundraisingFor" value="yourself" />
+                    </label>
+
+                    <!-- Choice box for "Someone Else" -->
+                    <label class="choice-box cursor-pointer flex flex-row items-center justify-between p-4 border border-gray-300 rounded-lg w-full">
+                        <div class="choice-content">
+                            <h3 class="choice-title font-bold text-lg">Someone else</h3>
+                            <p class="choice-description text-gray-500">You'll invite a beneficiary to receive funds or distribute them yourself</p>
+                        </div>
+                        <img src="someone.png" alt="Someone Else" class="choice-icon h-15 w-12 object-cover"> <!-- Replace with your image path -->
+                        <input type="radio" class="hidden" name="fundraisingFor" value="someoneElse" />
+                    </label>
+
+                    <!-- Choice box for "Charity" -->
+                    <label class="choice-box cursor-pointer flex flex-row items-center justify-between p-4 border border-gray-300 rounded-lg w-full">
+                        <div class="choice-content">
+                            <h3 class="choice-title font-bold text-lg">Charity</h3>
+                            <p class="choice-description text-gray-500">Funds are delivered to your chosen nonprofit for you</p>
+                        </div>
+                        <img src="organization.png" alt="Charity" class="choice-icon h-12 w-12 object-cover"> <!-- Replace with your image path -->
+                        <input type="radio" class="hidden" name="fundraisingFor" value="charity" />
+                    </label>
+                </div>
+
+             <!-- Continue button aligned to the right under the choice boxes -->
+    <div class="flex justify-end w-full">
+        <button id="continueButton" type="button" 
+                class="px-6 py-2 text-white rounded focus:outline-none focus:ring custom-continue-btn"
+                style="background-color: #088F8F;"> <!-- Hex code for default state -->
+            Continue
+        </button>
+    </div>
+
+
+      <!-- JavaScript for changing label color on selection -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const choices = document.querySelectorAll('.choice-box');
+        choices.forEach(choice => {
+            const input = choice.querySelector('input[type="radio"]');
+            choice.addEventListener('click', () => {
+                // Unselect all choices
+                choices.forEach(c => {
+                    c.classList.remove('selected');
+                });
+                // Select the clicked choice
+                choice.classList.add('selected');
+            });
+        });
+    });
+document.getElementById('continueButton').addEventListener('click', function() {
+        window.location.href = 'start02.html';
+    });
+</script>
+</body>
+
+</html>
