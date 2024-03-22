@@ -87,23 +87,26 @@
 			text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         }
 
-        .video-container {
-            background-color: #e6e6e6;
-            position: relative;
-            padding-top: 30%;
-            width: 60%;
-            margin: 0 auto;
-            margin-bottom: 40px;
-        }
+.video-container {
+    background-color: #e6e6e6;
+    position: relative;
+    padding-top: 40%; /* Adjust if needed for different aspect ratios. 56.25% is for 16:9 */
+    width: 70%; /* Adjusted from 60% to make the video smaller. You can tweak this value as needed */
 
+    margin: 0 auto;
+    margin-bottom: 40px;
+    overflow: hidden; /* Ensure no overflow outside this container */
+}
 .video-container video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the container, preserving aspect ratio */
+}
         .video-placeholder {
             position: absolute;
             top: 0;
@@ -180,7 +183,7 @@
         <div class="subheading">FundCambo is the best place to fundraise, whether you are an individual, group, or organisation.</div>
          <div class="video-container">
         <video controls>
-            <source src="path_to_your_video.mp4" type="video/mp4">
+            <source src="FUNDCAMBO VIDEO.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
